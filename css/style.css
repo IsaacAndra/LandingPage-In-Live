@@ -65,13 +65,24 @@ img{
 }
 
 .menu-usuario a {
-    padding: 9px;
+    padding: 8px;
     margin: 10px;
 }
 
 .menu-usuario .cadastrar {
     color: white;
+    background: #8E2424;
+    border: 1px solid #8E2424;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: .2s;
     
+}
+
+.cadastrar:hover {
+    background: rgba(235, 174, 174, 0.705);
+    border: 1px solid #ffffff;
+    color: black;
 }
 
 .menu-usuario .entrar{
@@ -79,16 +90,6 @@ img{
     font-size: 16px;
 }
 
-.cadastrar {
-    background: #8E2424;
-    border-radius: 8px;
-    transition: .2s;
-}
-
-.cadastrar:hover {
-    background: rgba(0, 0, 0, .2);
-    color: black;
-}
 
 .sobre {
     display: flex;
@@ -370,19 +371,87 @@ img{
 
 .form {
     max-width: 100%;
+    padding: 96px 0;
     background: #F9FAFB;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .container {
+    text-align: center;
+    line-height: 50px;
+    padding: 32px;
+}
+
+.content-titulo {
+    font-size: 1.75em;
+    font-weight: 768;
+}
+
+.content-texto {
+    color: #667085;
+}
+
+.content-footer {
     display: flex;
-    padding: 100px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    padding: 0px;
+    gap: 16px;   
+}
+
+.email {
+    width: 360px;
+    padding: 9px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 8px;
+}
+
+.cadastrar-email {
+    background: #8E2424;
+    color: white;
+    border: 1px solid #8E2424;
+    border-radius: 8px;
+    padding: 12px 20px;
+    transition: .2s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cadastrar-email:hover {
+    background: rgba(235, 174, 174, 0.705);
+    border: 1px solid #ffffff;
+    color: black;
+}
+
+footer {
+    font-size: 16px;
+    color: #98A2B3;
+}
+
+@media screen and (max-width: 800px) {
+    .body {
+        width: 100vw;
+    }
     
-}
+    .menu-usuario {
+        display: none;
+    }
 
-.content {
-    padding: 10px;
-}
+    .menu-nav {
+        display: none;
+    }
+    
+    .metricas {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
 
+    .metricas-info {
+        max-width: 300px;
+    }
+
+}
